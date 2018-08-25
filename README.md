@@ -4,7 +4,7 @@ Simple Employee management system that contains
 * Authentification
 * Handling user profile
 
-With the new ASP.NET Core 2.2 MVC and Entity Framework core.
+With the new ASP.NET Core 2.2 MVC and Entity Framework core using SQLite database.
 
 ## Screenshot
 
