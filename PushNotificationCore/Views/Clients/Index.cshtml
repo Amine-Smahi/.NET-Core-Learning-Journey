@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PushNotificationCore.Models.Client>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 class="page-header" id="overview"><a class="anchorjs-link " href="#overview" aria-label="Anchor link for: overview" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>List of clients</h1>
+<div class="row">
+    <div class="col-xs-12" style="margin-bottom:20px">
+        <a class="btn btn-success btn-lg pull-right" asp-action="Create">New Client</a>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <colgroup>
+            <col class="col-xs-1">
+            <col class="col-xs-7">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row"> <code>@item.Id</code> </th>
+                    <td>@item.Name</td>
+                    <td>
+                        <a class="btn btn-default btn-sm" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

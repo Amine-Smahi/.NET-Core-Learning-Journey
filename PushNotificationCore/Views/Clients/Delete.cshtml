@@ -1,0 +1,38 @@
+﻿@model PushNotificationCore.Models.Client
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<h1 class="page-header" id="overview">
+    <a class="anchorjs-link " href="#overview"
+       aria-label="Anchor link for: overview" data-anchorjs-icon=""
+       style="font-family: anchorjs-icons; font-style: normal;
+       font-variant: normal; font-weight: normal; line-height: inherit;
+      position: absolute; margin-left: -1em; padding-right: 0.5em;">
+    </a>Delete Client
+</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" asp-for="Name" disabled="disabled">
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input asp-for="SimularException" disabled="disabled"> Simular Exception
+                </label>
+            </div>
+            <div>
+                <a asp-action="Index" class="btn btn-default">Cancelar</a>
+                <button type="submit" class="btn btn-danger pull-right">Delete</button>
+            </div>
+
+        </form>
+    </div>
+</div>

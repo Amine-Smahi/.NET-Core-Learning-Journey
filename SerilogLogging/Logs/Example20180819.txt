@@ -1,0 +1,60 @@
+19-Aug-2018 12:21:42.086 +01:00 [INF] User profile is available. Using 'C:\Users\L\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+19-Aug-2018 12:22:13.162 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/robots.txt  
+19-Aug-2018 12:22:13.162 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/  
+19-Aug-2018 12:22:13.248 +01:00 [INF] Request finished in 90.0648ms 404 
+19-Aug-2018 12:22:13.256 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action SerilogDemo.Controllers.HomeController.Index (SerilogDemo)
+19-Aug-2018 12:22:13.264 +01:00 [INF] Executing action method SerilogDemo.Controllers.HomeController.Index (SerilogDemo) - Validation state: "Valid"
+19-Aug-2018 12:22:13.268 +01:00 [INF] Index method called!!!
+19-Aug-2018 12:22:13.270 +01:00 [INF] Executed action method SerilogDemo.Controllers.HomeController.Index (SerilogDemo), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.6347ms.
+19-Aug-2018 12:22:13.284 +01:00 [INF] Executing ViewResult, running view Index.
+19-Aug-2018 12:22:13.349 +01:00 [INF] Executed ViewResult - view Index executed in 74.3049ms.
+19-Aug-2018 12:22:13.349 +01:00 [INF] Executed action SerilogDemo.Controllers.HomeController.Index (SerilogDemo) in 92.6396ms
+19-Aug-2018 12:22:13.353 +01:00 [INF] Request finished in 193.5326ms 200 text/html; charset=utf-8
+19-Aug-2018 12:22:13.496 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/css/site.min.css  
+19-Aug-2018 12:22:13.496 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/lib/bootstrap/dist/css/bootstrap.min.css  
+19-Aug-2018 12:22:13.496 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/js/site.min.js?v=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU  
+19-Aug-2018 12:22:13.499 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/lib/jquery/dist/jquery.min.js  
+19-Aug-2018 12:22:13.501 +01:00 [INF] Sending file. Request path: '/css/site.min.css'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\css\site.min.css'
+19-Aug-2018 12:22:13.501 +01:00 [INF] Request finished in 4.8305ms 200 text/css
+19-Aug-2018 12:22:13.503 +01:00 [INF] Sending file. Request path: '/js/site.min.js'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\js\site.min.js'
+19-Aug-2018 12:22:13.503 +01:00 [INF] Request finished in 7.0449ms 200 application/javascript
+19-Aug-2018 12:22:13.504 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/lib/bootstrap/dist/js/bootstrap.min.js  
+19-Aug-2018 12:22:13.513 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\lib\jquery\dist\jquery.min.js'
+19-Aug-2018 12:22:13.513 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.min.js'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js'
+19-Aug-2018 12:22:13.513 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+19-Aug-2018 12:22:13.514 +01:00 [INF] Request finished in 15.6883ms 200 application/javascript
+19-Aug-2018 12:22:13.514 +01:00 [INF] Request finished in 15.4936ms 200 application/javascript
+19-Aug-2018 12:22:13.515 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/images/banner1.svg  
+19-Aug-2018 12:22:13.515 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/images/banner2.svg  
+19-Aug-2018 12:22:13.516 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/images/banner3.svg  
+19-Aug-2018 12:22:13.516 +01:00 [INF] Sending file. Request path: '/images/banner1.svg'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\images\banner1.svg'
+19-Aug-2018 12:22:13.516 +01:00 [INF] Request finished in 0.7038ms 200 image/svg+xml
+19-Aug-2018 12:22:13.516 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/images/banner4.svg  
+19-Aug-2018 12:22:13.516 +01:00 [INF] Sending file. Request path: '/images/banner3.svg'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\images\banner3.svg'
+19-Aug-2018 12:22:13.516 +01:00 [INF] Request finished in 0.3716ms 200 image/svg+xml
+19-Aug-2018 12:22:13.516 +01:00 [INF] Sending file. Request path: '/images/banner2.svg'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\images\banner2.svg'
+19-Aug-2018 12:22:13.516 +01:00 [INF] Request finished in 0.9294ms 200 image/svg+xml
+19-Aug-2018 12:22:13.515 +01:00 [INF] Request finished in 18.2126ms 200 text/css
+19-Aug-2018 12:22:13.516 +01:00 [INF] Sending file. Request path: '/images/banner4.svg'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\images\banner4.svg'
+19-Aug-2018 12:22:13.518 +01:00 [INF] Request finished in 2.3882ms 200 image/svg+xml
+19-Aug-2018 12:22:13.656 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+19-Aug-2018 12:22:13.656 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2'
+19-Aug-2018 12:22:13.657 +01:00 [INF] Request finished in 0.6181ms 200 font/woff2
+19-Aug-2018 12:22:14.032 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/favicon.ico  
+19-Aug-2018 12:22:14.033 +01:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Dev\Aspnetcore-master\Logging with .net core 2.0\Using Serilog\SerilogUsingFileSink\wwwroot\favicon.ico'
+19-Aug-2018 12:22:14.035 +01:00 [INF] Request finished in 1.9108ms 200 image/x-icon
+19-Aug-2018 12:22:31.784 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/Home/About  
+19-Aug-2018 12:22:31.784 +01:00 [INF] Request finished in 0.4333ms 404 
+19-Aug-2018 12:23:21.798 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/Home/Contact  
+19-Aug-2018 12:23:21.798 +01:00 [INF] Request finished in 0.3706ms 404 
+19-Aug-2018 12:24:48.452 +01:00 [INF] User profile is available. Using 'C:\Users\L\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+19-Aug-2018 12:30:45.879 +01:00 [INF] User profile is available. Using 'C:\Users\L\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+19-Aug-2018 12:30:52.977 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:52345/Home  
+19-Aug-2018 12:30:53.058 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action SerilogLogging.Controllers.HomeController.Index (SerilogLogging)
+19-Aug-2018 12:30:53.065 +01:00 [INF] Executing action method SerilogLogging.Controllers.HomeController.Index (SerilogLogging) - Validation state: "Valid"
+19-Aug-2018 12:30:53.069 +01:00 [INF] Index method called!!!
+19-Aug-2018 12:30:53.071 +01:00 [INF] Executed action method SerilogLogging.Controllers.HomeController.Index (SerilogLogging), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.6816ms.
+19-Aug-2018 12:30:53.083 +01:00 [INF] Executing ViewResult, running view Index.
+19-Aug-2018 12:30:53.150 +01:00 [INF] Executed ViewResult - view Index executed in 73.120100000000008ms.
+19-Aug-2018 12:30:53.150 +01:00 [INF] Executed action SerilogLogging.Controllers.HomeController.Index (SerilogLogging) in 91.9961ms
+19-Aug-2018 12:30:53.156 +01:00 [INF] Request finished in 180.4854ms 200 text/html; charset=utf-8

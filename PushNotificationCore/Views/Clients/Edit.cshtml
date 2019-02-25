@@ -1,0 +1,35 @@
+﻿@model PushNotificationCore.Models.Client
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<h1 class="page-header" id="overview"><a class="anchorjs-link " href="#overview" aria-label="Anchor link for: overview" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Edit Clients</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" asp-for="Name" placeholder="Entre com Name" autocomplete="off">
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input asp-for="SimularException"> Simular Exception
+                </label>
+            </div>
+            <div>
+                <a asp-action="Index" class="btn btn-default">Cancelar</a>
+                <button type="submit" class="btn btn-success pull-right">Edit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
