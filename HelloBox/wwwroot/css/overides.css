@@ -1,0 +1,99 @@
+header {
+    position: relative;
+    background-color: black;
+    height: 90vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+    header video {
+      display: none;
+    }
+}
+#services{
+    padding: 1px 0px;
+}
+.responsive{
+    width: 60%;
+    height: auto;
+}
+.scrolling{
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+.headline{
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+.content-start{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.btn-back{
+    background-color: #212529!important;
+    color: #fff !important;
+    margin: 20px;
+}
+.login{
+    border-radius: 5px;
+    background-color: #fff !important;
+    padding: 20px;
+    border: 1px solid #212529;
+    box-shadow: 2px 2px 2px #FED136;
+    margin-bottom: -50px;
+}
+.register-start{
+    margin-top: 140px;
+    margin-bottom: 80px;
+}
+nav .text-dark{
+    color: #fff !important;
+}
+nav .text-dark:hover{
+    color: #FED136 !important;
+}
+.portitem{
+    height: 300px !important;
+    width: 400px !important;
+}
