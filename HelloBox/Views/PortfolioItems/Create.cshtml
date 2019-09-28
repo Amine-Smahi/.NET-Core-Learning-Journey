@@ -1,0 +1,69 @@
+@using HelloBox.Controllers
+@model HelloBox.Models.PortfolioItem
+
+@{
+    ViewData["Title"] = "Create";
+    HomeController.NavState = false;
+}
+<div class="container content-start">
+    <h1>Create</h1>
+
+    <h4>PortfolioItem</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <form asp-action="Create" asp-antiforgery="false" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="PicturePath" class="control-label"></label>
+                    <br />
+                    <input name="file" id="uploadImage" type="file" onchange="PreviewImage();" accept="image/*" />
+                    <br/>
+                    <img id="uploadPreview" height="200" width="200" />
+                    <span asp-validation-for="PicturePath" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control"/>
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control"/>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category" class="control-label"></label>
+                    <select asp-for="Category" class="form-control" asp-items="Html.GetEnumSelectList<Category.Categories>()"></select>
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label"></label>
+                    <textarea id="MyID" asp-for="Content" class="form-control"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn btn-back" asp-action="Index">Back to List</a>
+    </div>
+</div>
+<hr />
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script type="text/javascript">
+    function PreviewImage() {
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("uploadPreview").src = oFREvent.target.result;
+        };
+    };
+</script>

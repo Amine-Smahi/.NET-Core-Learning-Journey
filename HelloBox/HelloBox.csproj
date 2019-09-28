@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <UserSecretsId>aspnet-HelloBox-C7DB7BD4-D892-4D40-A867-5F0E24D369D9</UserSecretsId>
+        <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.0" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+        <PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.2.2" />
+    </ItemGroup>
+    <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="wwwroot\uploads" />
+    </ItemGroup>
+</Project>

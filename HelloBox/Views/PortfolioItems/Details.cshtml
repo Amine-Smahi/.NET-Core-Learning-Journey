@@ -1,0 +1,59 @@
+@using HelloBox.Controllers
+@using Westwind.AspNetCore.Markdown
+@model HelloBox.Models.PortfolioItem
+
+@{
+    ViewData["Title"] = "Details";
+    HomeController.NavState = false;
+}
+<div class="container content-start">
+    <h1>Details</h1>
+
+    <div>
+        <h4>PortfolioItem</h4>
+        <hr />
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.PicturePath)
+            </dt>
+            <dd class = "col-sm-10">
+                <img src="@Html.DisplayFor(model => model.PicturePath)" height="200" width="200" />
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Category)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DatePublished)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DatePublished)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+            <dd class="col-sm-10">
+                @Markdown.ParseHtmlString(Model.Content)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+<hr />
