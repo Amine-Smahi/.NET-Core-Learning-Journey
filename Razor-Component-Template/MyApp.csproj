@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <IsPackable>true</IsPackable>
+    <PackageId>Razor-Components-Template</PackageId>
+    <Title>Razor-Components-Template</Title>
+    <Description>Its a Blazor serverside United Template with all the ASP.NET Core templates using bootsrap 4 and components architecture.</Description>
+    <Version>1.3.0</Version>
+    <Tags>Razor,Blazor,ServerSide,Razor Component,Component,SPA</Tags>
+    <RepositoryURL>https://github.com/Amine-Smahi/Razor-Component-Template/</RepositoryURL>
+    <Authors>Amine_Smahi</Authors>
+    <Copyright>Copyright ©2019 amine_smahi</Copyright>
+    <LicenseURL>https://github.com/Amine-Smahi/Razor-Component-Template/blob/master/LICENSE</LicenseURL>
+  </PropertyGroup>
+
+</Project>
