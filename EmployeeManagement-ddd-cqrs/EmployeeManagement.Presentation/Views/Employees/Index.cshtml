@@ -1,0 +1,66 @@
+﻿@model IEnumerable<EmployeeManagement.Domain.Entities.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<center><h2>All Employees</h2></center>
+
+<div class="btnBack">
+    <p>
+        <a class="btn btn-success" asp-action="Create">Create New</a>
+    </p>
+    <br />
+    <table class="table">
+            <thead class="thead-light">
+                <tr class="d-flex">
+                    <th class="col-2">
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                    <th class="col-2">
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                    <th class="col-2">
+                        @Html.DisplayNameFor(model => model.Address)
+                    </th>
+                    <th class="col-2">
+                        @Html.DisplayNameFor(model => model.PersonalNumber)
+                    </th>
+                    <th class="col-2">
+                        @Html.DisplayNameFor(model => model.level)
+                    </th>
+                    <th class="col-4">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr class="d-flex">
+                    <td class="col-2">
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td class="col-2">
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td class="col-2">
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td class="col-2">
+                        @Html.DisplayFor(modelItem => item.PersonalNumber)
+                    </td>
+                    <td class="col-2">
+                        @Html.DisplayFor(modelItem => item.level)
+                    </td>
+
+                    <td class="col-4">
+                        <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a class="btn btn-success" asp-action="RaiseLevel" asp-route-id="@item.Id">Raise</a>
+                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+</div>
