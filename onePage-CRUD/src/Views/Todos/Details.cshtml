@@ -1,0 +1,30 @@
+@model onePage_CRUD.Models.Todo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Todo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsDone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsDone)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="_Edit" asp-route-id="@Model.Id">Edit</a> 
+    <a asp-action="Index">Back to List</a>
+</div>

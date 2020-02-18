@@ -1,0 +1,36 @@
+@model onePage_CRUD.Models.Todo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Create Todo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="_Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsDone" /> @Html.DisplayNameFor(model => model.IsDone)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

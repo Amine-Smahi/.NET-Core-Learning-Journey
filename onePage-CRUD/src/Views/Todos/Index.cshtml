@@ -1,0 +1,71 @@
+@model IEnumerable<onePage_CRUD.Models.Todo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<br/>
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#CreateTodoModel">
+    Create Todo
+</button>
+<br/><br/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDone)
+            </td>
+            <td>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit_todo@(item.Id)">Update Todo</button>
+                <div class="modal fade" id="edit_todo@(item.Id)" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                @await Html.PartialAsync("_Edit.cshtml", item)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete_todo@(item.Id)">Delete Todo</button>
+                <div class="modal fade" id="delete_todo@(item.Id)" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                @await Html.PartialAsync("_Delete.cshtml", item)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="CreateTodoModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                @await Html.PartialAsync("_Create.cshtml", new Todo())
+            </div>
+        </div>
+    </div>
+</div>
