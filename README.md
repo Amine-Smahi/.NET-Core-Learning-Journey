@@ -1,5 +1,5 @@
-<h1 align="center">ASP.NET Core Learning Journey</h1>
-<p align="center">The humble way i took to learn ASP.NET Core Framework, Be free to add any helpful resources! </p>
+<h1 align="center">.NET Core Learning Journey</h1>
+<p align="center">The humble way i took to learn .NET Core Framework, Be free to add any helpful resources! </p>
 
 <h2>Summary</h2>
 
